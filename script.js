@@ -17,6 +17,7 @@
         }
         else{
             var data = await response.json();
+            document.querySelector(".error").style.display = "none";
             document.querySelector(".city").innerHTML = data.name;
             document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
             document.querySelector(".humidity").innerHTML = data.main.humidity  + " %";
